@@ -15,16 +15,83 @@
 <body>
 
   <div class="container">
-    <h1>Headline</h1>
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-8 offset-md-2">
+        <h1>Vespa Quiz: With Bootstrap 4 form styles</h1>
+        <p>Some text about the topic needs to go here.</p>
+        <p>Link to the Wikipedia article.</p>
         <form>
-          <label for="text-name">
-            Name: <input type="text" id="text-name" name="text_name">
-          </label>
-          <label for="textarea-name">
-            Textarea: <textarea id= "textarea-name" name="textarea_name" rows="3"></textarea>
-          </label>
+          <div class="form-group">
+            <label class="form-control-label" for="country">In which country did the Vespa orginate?</label>
+            <input class="form-control" type="text" id="country" name="country" required>
+          </div>
+          <div class="form-group">
+            <label class="form-control-label" for="manufacturer">What is the name of the manufaturer of Vespas?</label>
+            <input class="form-control" type="text" id="manufacturer" name="manufacturer" required>
+          </div>
+          <div class="form-group">
+            <label class="form-control-label" for="happened">What happened to the company between 1999 and 2004?</label>
+            <textarea class="form-control" rows="3" id="happened" name="happened"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-control-label">In which year did Vespa leave the U.S. market? (choose one only)</label>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="year" value="1945">1945
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="year" value="1972">1972
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="year" value="1982">1982
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="year" value="1999">1999
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-control-label">Which countries manufacture Vespas today? (check all that apply)</label>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="country" value="India">India
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="country" value="Indonesia">Indonesia
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="country" value="United Kingdom">United Kingdom
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="country" value="Vietnam">Vietnam
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-control-label" for="model">Which one of these is the current "standard" Vespa? (select one)</label>
+            <select class="form-control" id="model" name="model">
+              <option value="946">946</option>
+              <option value="GTS">GTS</option>
+              <option value="GTV">GTV</option>
+              <option value="Alpha">Alpha</option>
+              <option value="Beta">Beta</option>
+              <option value="Gamma">Gamma</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" type="submit" value="">Submit Answers</button>
+          <button class="btn btn-secondary" type="reset" value="">Start Over</button>
         </form>
       </div>
     </div><!-- end row -->
